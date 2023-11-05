@@ -71,7 +71,15 @@
                 justify-content: space-between;
                 min-height: 100vh;
               max-height: 100vh;
+              animation: zoomIn 20s linear infinite; /* Adicionar a animação de zoom out na imagem de fundo */
+      
             }
+
+            @keyframes zoomIn {
+    0% { background-size: 120%; }
+100% { background-size: 100%; }
+}
+        
 
          .loading-overlay {
                 position: fixed;
@@ -105,11 +113,12 @@
             text-align: center;
            
         }
-        .header img {
-    padding-top: 15px;
-    width: 180px; /* Tamanho do logo em telas menores */
-   
-}
+
+            .header img {
+        padding-top: 15px;
+        width: 180px; /* Tamanho do logo em telas menores */
+         }
+
         .content {
           
              padding-top: 200px;
@@ -128,27 +137,35 @@
             padding: 10px;
            
         }
-        @media screen and (max-width: 1008px) {
-            body {
-               min-height: 93vh;
-              max-height: 93vh;
-        background-position: 70% top; /* Posicionar a imagem a 70% da largura à direita e 10% da altura a partir do topo */
-    }
-    .header img {
-        padding-top: 15px;
-        width: 400px; /* Tamanho do logo em telas menores */
-    }
-    .content {
-      margin-top: 300px;
-        font-size: 40px; /* Tamanho do texto no content em telas menores */
-    }
-    .footer {
+                @media screen and (max-width: 1008px) {
+                    body {
+                    min-height: 93vh;
+                    max-height: 93vh;
+                background-position: 70% top; /* Posicionar a imagem a 70% da largura à direita e 10% da altura a partir do topo */
+                animation: zoomIn 25s linear infinite; /* Adicionar a animação de zoom out na imagem de fundo */
+            }
+        .header img {
+            padding-top: 15px;
+            width: 400px; /* Tamanho do logo em telas menores */
+        }
+        .content {
+        margin-top: 300px;
+            font-size: 44px; /* Tamanho do texto no content em telas menores */
+        }
+        .footer {
 
-     
-       padding: 10px;
-        font-size: 22px; /* Tamanho do texto no footer em telas menores */
+        padding: 15px;
+            font-size: 24px; /* Tamanho do texto no footer em telas menores */
+
+        }
     }
-}
+
+        @keyframes zoomIn {
+            0% { background-size: 370%; }
+        100% { background-size: 298%; }
+        }
+
+
         html, body {
           overflow: hidden;
         }
