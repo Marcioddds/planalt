@@ -103,6 +103,7 @@
     
         .header-content img {
             width: 280px;
+            animation: fadeIn 1s ease-out;
         }
     
         .textHead {
@@ -111,7 +112,21 @@
             padding: 10px;
             z-index: 1;
             font-size: 18px;
+            animation: fadeIn 3s ease-out;
         }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(2px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    
     
         .loading-overlay {
             position: fixed;
@@ -204,6 +219,7 @@
             }
         }
     </style>
+    
 </head>
 <body onload="hideLoading()">
 
