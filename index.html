@@ -480,6 +480,14 @@ grid-template-rows: repeat(3, 1fr);
     </style>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('video');
+
+            video.addEventListener('loadeddata', function () {
+                hideLoading();
+            });
+        });
+
         function hideLoading() {
             var loadingOverlay = document.querySelector('.loading-overlay');
             if (loadingOverlay) {
