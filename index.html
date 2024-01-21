@@ -24,19 +24,29 @@
    <meta name="twitter:creator" content="PLANALT Topografia" />
   
   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
    
-    
-    <!-- <link rel="stylesheet" href="css/style.css">
    
-   favicon
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/faviconandroid-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon/android-chrome-512x512.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
-    <meta name="msapplication-TileImage" content="https://portugal-la-fora.com/images/favicon/favicon.ico">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">-->
+  
+    <link rel="apple-touch-icon" sizes="57x57" href="imagens/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="imagens/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="imagens/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="imagens/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="imagens/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="imagens/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="imagens/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="imagens/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="imagens/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="imagens/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="imagens/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon/favicon-16x16.png">
+<link rel="manifest" href="imagens/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="imagens/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
     
     
     
@@ -46,156 +56,416 @@
     <!-- 
      <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Portugal lá Fora","url":"https://portugal-la-fora.com/","address":"Switzerland","sameAs":["https://web.facebook.com/portugallafora0", "https://instagram.com/portugallafora?igshid=1cuu0p7kp85o3", "https://twitter.com/portugal_fora?s=07"]}</script>
       -->
+     
       <style>
-            @font-face {
-                font-family: 'Neuropol';
-                src: url('font/neuropol.otf') format('opentype');
-                font-weight: normal;
-                font-style: normal;
-            }
-            
-               
-            
-       
-            body {
-                margin: 0;
-                padding: 0;
-                background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 250, 250, 0.1)), url('imagens/planalt-topografia-esposende-braga.jpg');
-                background-size: cover;
-                background-position: center top; /* Mover a imagem para o topo */
-                background-attachment: fixed;
-                font-family: 'Neuropol', sans-serif;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                min-height: 100vh;
-              max-height: 100vh;
-              animation: zoomIn 20s linear infinite; /* Adicionar a animação de zoom out na imagem de fundo */
-      
-            }
-
-            @keyframes zoomIn {
-    0% { background-size: 120%; }
-100% { background-size: 100%; }
-}
-        
-
-         .loading-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgb(255, 255, 255);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 9999;
-            }
+        /* Seus estilos existentes aqui */
     
-            .loading-spinner {
-                border: 6px solid #29ab29;
-                border-top: 6px solid transparent;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                animation: spin 1s linear infinite;
-            }
+        @font-face {
+            font-family: 'neuropol';
+            src: url('font/neuropol.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
     
-            @keyframes spin {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
-
-        
-        .header {
-            text-align: center;
-           
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-
-            .header img {
-        padding-top: 30px;
-        width: 180px; /* Tamanho do logo em telas menores */
-         }
-
-        .content {
-          
-             padding-top: 200px;
+    
+        header {
+            position: relative;
+            height: 100vh;
             text-align: center;
-            flex-grow: 1;
-            color: rgb(205, 205, 205);
-            font-size: 34px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
         }
-
-        
-        .footer {
-            text-align: center;
-           
+    
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    
+        .header-content {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    
+        .header-content img {
+            width: 280px;
+        }
+    
+        .textHead {
+            margin-top: 100px;
             color: #fff;
             padding: 10px;
-           
+            z-index: 1;
+            font-size: 18px;
         }
-                @media screen and (max-width: 1008px) {
-                    body {
-                    min-height: 93vh;
-                    max-height: 93vh;
-                background-position: 75% top; /* Posicionar a imagem a 70% da largura à direita e 10% da altura a partir do topo */
-                animation: zoomIn2 20s linear infinite; /* Adicionar a animação de zoom out na imagem de fundo */
-            }
-        .header img {
-            padding-top: 15px;
-            width: 400px; /* Tamanho do logo em telas menores */
+    
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
         }
+    
+        .loading-spinner {
+            border: 6px solid #29ab29;
+            border-top: 6px solid transparent;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+    
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    
         .content {
-        margin-top: 300px;
-            font-size: 44px; /* Tamanho do texto no content em telas menores */
+            z-index: 1;
         }
-        .footer {
-
-        padding: 15px;
-            font-size: 24px; /* Tamanho do texto no footer em telas menores */
-
+    
+        main {
+            text-align: center;
         }
-    }
-
-        @keyframes zoomIn2 {
-            0% { background-size: 350%; }
-        100% { background-size: 298%; }
+    
+        .servicos {
+            margin: 20px 0;
+            padding: 20px;
         }
-
-
-        html, body {
-          overflow: hidden;
+    
+        .servicos h3 {
+            font-size: 26px;
+            margin: 0;
+            margin-top: 20px;
+            padding: 40px;
+        }
+    
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 20px;
+            margin-top: 40px;
+            padding: 40px;
+        }
+    
+        .grid-item {
+            text-align: center;
+            padding-bottom: 20px; /* Reduzi para 20px para melhor visualização em dispositivos móveis */
+        }
+    
+        .grid-item img {
+            border-radius: 50%;
+            width: 100%; /* Ajustei para ocupar 100% da largura do contêiner */
+            max-width: 150px; /* Adicionei uma largura máxima para garantir um tamanho razoável */
+            height: 150px; /* Para manter a proporção original da imagem */
+            object-fit: cover;
+        }
+    
+        .grid-item p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    
+        @media screen and (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+    
+            .header-content img {
+                width:290px; /* Ajustei para ocupar 80% da largura do contêiner em dispositivos móveis */
+            }
+    
+            .textHead {
+                
+                width: 100%;
+                margin-top: 40px; /* Reduzi a margem para melhor visualização em dispositivos móveis */
+            }
         }
     </style>
-
-    <meta name="google-site-verification" content="siyJlsflrZiIlns6Z5J9XVOxvCnADEUJS7awqcRfmYQ" />
 </head>
 <body onload="hideLoading()">
-  
-  <div class="loading-overlay">
-            <div class="loading-spinner"></div>
-        </div>
-  
-    <div class="header">
-        <img src="imagens/topografia-esposende-braga-barcelos-planalt.png" alt="Logo da Empresa" >
-    </div>
-    <div class="content">
-       
-        <p>BREVEMENTE ONLINE</p>
-    </div>
-    <div class="footer">
-        <p>Esposende, Braga | geral@planalt.pt | 917257289</p>
+
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
     </div>
 
-   <script>
-            function hideLoading() {
-                var loadingOverlay = document.querySelector('.loading-overlay');
-                if (loadingOverlay) {
-                    loadingOverlay.style.display = 'none';
+    <header>
+        <video autoplay muted loop>
+            <source src="imagens/planalt-topografia-esposende-braga-norte-portugal.mp4" type="video/mp4">
+        </video>
+
+        <div class="header-content">
+            <img src="imagens/topografia-esposende-braga-barcelos-planalt.png" alt="Logo da Empresa">
+            <div class="textHead">
+                <p>Fornecemos as bases e os parâmetros para que grandes projetos saiam do papel.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="servicos">
+            <h3>Os nossos serviços</h3>
+
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="imagens/levantamentos-topograficos-planalt-esposende-braga.jpg" alt="levantamentos topograficos da Planalt-esposende-braga">
+                    <p>Levantamentos Topográficos</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/levantamentos-arquitetonicos-esposende-braga-bracelos.jpg" alt="Levantamentos Arquitetónicos pela Planalt em Viana do Castelo">
+                    <p>Levantamentos Arquitetónicos</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/Laser-SCANNER-3D-Planalt-braga.jpg" alt="Laser SCANNER 3D da Planalt em Braga">
+                    <p>Laser SCANNER 3D</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/aerofotogrametria-planalt-esposende.jpg" alt="Aerofotogrametria da Planalt em Esposende">
+                    <p>Aerofotogrametria</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/cartografia-planalt-esposende-norte-portugal.jpg" alt="CArtografia pela Planalt em POrtugal">
+                    <p>Cartografia</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/cadastro-topografico-esposende-braga.jpg" alt="cadastro topográfico em Esposende-braga">
+                    <p>Cadastro</p>
+                </div>
+                
+                
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
+        </section>
+        <section class="projetos">
+            <div class="coluna1">
+                <div class="coluna1-conteudo">
+                    <h2>Confia-nos o teu projeto</h2>
+                    <p>Planalt, a referência em topografia na região de Esposende, no Norte de Portugal. Somos uma equipe dedicada e apaixonada por transformar paisagens em mapas detalhados, oferecendo serviços de topografia de alta qualidade.</p>
+                    <p>Nosso compromisso vai além das medições; buscamos entender as necessidades únicas de cada projeto para entregar soluções personalizadas.</p>
+                    <div class="coluna1-botao">
+                        <a href="#footer" class="botao-link">Pede um Orçamento</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coluna2">
+                <video autoplay muted loop>
+                    <source src="imagens/planalt-tpopografos-esposende-braga-barecelos-.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <style>
+            .projetos {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 20px;
+                min-height: 100vh;
+             
+            }
+    
+            .coluna1 {
+                background-color: #DBE7C6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+    
+            .coluna1-conteudo {
+                text-align: left;
+                padding: 20px; /* Reduzido para dispositivos móveis */
+            }
+    
+            .coluna1 h2 {
+                font-size: 39px;
+                font-weight: bold;
+            }
+    
+            .coluna1 p {
+                font-size: 15px;
+                line-height: 22px;
+            }
+    
+            .coluna2 {
+                position: relative;
+            }
+    
+            .coluna2 video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .coluna1-botao {
+                text-align: left;
+                margin-top: 20px;
+            }
+    
+            .botao-link {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #fff;
+                color: #000;
+                text-decoration: none;
+                font-size: 13px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .botao-link:hover {
+                background-color: #000;
+                color: #fff;
+            }
+    
+            @media screen and (max-width: 768px) {
+                .projetos {
+                    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+                    grid-template-rows: auto auto; /* Dois rows em telas menores */
+                }
+    
+                .coluna1 {
+                    padding: 20px;
+                }
+    
+                .coluna1-conteudo {
+                    padding: 20px;
                 }
             }
-        </script>
-  </body>
-</html>
+        </style>
+        <!-- Adicione outra section se necessário -->
+    </main>
+
+    <footer id="footer">
+        <div>
+        <img src="imagens/topografia-esposende-braga-barcelos-planalt.png" alt="Logo da Empresa Planalt">
+    </div>
+        <div>
+            <p style="font-weight: bold; font-size: 20px;">Mapeando o Amanhã, Moldando o Hoje</p>
+        </div>
+
+
+        <div style="grid-column: span 2;">
+            <p style="font-weight: bold; ">A nossa localização</p>
+            <p>Esposende, Braga</p>
+            <p>917257289</p>
+            <p>geral@planalt.pt</p>
+       </div>
+           
+            
+              
+           
+
+           <div class="redes-sociais">
+            <a href="https://www.instagram.com/planalt.pt?igsh=ZHQ4emY2OWFqNXk0&utm_source=qr">Instagram</a>
+           
+            <a href="https://www.facebook.com/profile.php?id=61552156709856">Facebook</a>
+            <a href=https://www.linkedin.com/in/planalt-topografia-545b85294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+        </div>
+
+    </footer>
+
+    <div class="desenvolvido">
+        Desenvolvido por <a href="https://portugal-la-fora.com/" target="_blank">Portugal Lá Fora</a>
+    </div>
+
+    <style>
+        /* Seus estilos existentes aqui */
+
+        footer {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            margin-top: auto;
+            min-height: 90vh;
+            max-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        footer img {
+            width: 200px; /* Ajuste conforme necessário */
+        }
+
+        .redes-sociais {
+            grid-column: span 2;
+            margin-top: 20px;
+        }
+
+        .redes-sociais a {
+            color: #71AE47;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        .redes-sociais a:hover {
+            color: #686868;
+        }
+
+        .desenvolvido {
+            grid-column: span 2;
+            margin-top: auto;
+            background-color: #111;
+            padding: 10px;
+            font-size: 12px;
+            text-align: center;
+            color: rgb(249, 243, 243);
+        }
+
+        .desenvolvido a {
+            color:  rgb(221, 194, 136);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .desenvolvido a:hover {
+            color: #DBE7C6;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer {
+                display: block;
+                    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+                    grid-template-rows: auto auto; /* Dois rows em telas menores */
+                }
+    footer div{padding-top: 30px; padding-bottom: 40px;}
+                
+            }
+    </style>
+
+    <script>
+        function hideLoading() {
+            var loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+      </html>
+      
